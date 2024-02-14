@@ -1,14 +1,14 @@
 # Project-1---Group-9
 
 ## Overview
-Video games have been a popular hobby since the early 1970s, ranging from classic arcade consoles to portable handheld devices and computers. Many people all over the world enjoy the plethora of possibilities that video games offer: they can play for fun or professionally, alone or with others, simple games like Tetris or complex role playing games (RPGs) like League of Legends. While this pop culture phenomenon has had a significant impact on society in many ways, how does it affect mental health and subsequently, people's lives?
+Video games have been a popular hobby since the early 1970s, ranging from classic arcade consoles to portable handheld devices and computers. Many people all over the world enjoy the plethora of possibilities that video games offer: they can play for fun or professionally, alone or with others, simple games like Tetris or complex role playing games (RPGs) like League of Legends. While this pop culture phenomenon has had a significant impact on society in many ways, how does it affect mental health, and subsequently, people's lives?
 
-In this project, our group decided to investigate how video games impact our mental health and lives. We found this dataset via Kaggle that included the recorded responses of over 13,000 players worldwide. The original survey was conducted in 2017 by Marian Sauter and Dejan Draschkow, and includes data relating to generalized anxiety disorder (GAD), satisfaction with life (SWL), gaming platform, reasons for playing, playstyle (alone or with others), hours played per week, employment status, education status, country of residence, and demographics suchs as age and gender identification. We considered the available information and narrowed down the dataset to answer these four questions:
+In this project, our group decided to investigate how video games impact our mental health and lives. We found this dataset via Kaggle that included the recorded responses of over 13,000 players worldwide. The original survey was conducted in 2017 by Marian Sauter and Dejan Draschkow, and includes data relating to generalized anxiety disorder (GAD), satisfaction with life (SWL), gaming platform, reasons for playing, playstyle (alone or with others), hours played per week, employment status, education status, country of residence, social phobia inventory (SPIN), and demographics suchs as age and gender identification. We considered the available information and narrowed down the dataset to answer these four questions:
 
-* How do gamers that play professionally compare to gamers that play for fun?
-* Do professional gamers have a better satisfaction with life (SWL) score than casual gamers?
-* Are those who play alone more anxious than those who play socially?
-* US Residents versus European Residents: who spends more time gaming per week, and how does it compare to their SWL score?
+1. How do gamers that play professionally compare to gamers that play for fun?
+2. Do professional gamers have a better satisfaction with life (SWL) score than casual gamers?
+3. Are those who play alone more anxious than those who play socially?
+4. US Residents versus European Residents: who spends more time gaming per week, and how does it compare to their SWL score?
 
 Our goal was to analyze this data and answer our questions using skills learned such as Python, Jupyter Notebook, Pandas, and Matplotlib.
 
@@ -21,15 +21,15 @@ The cleaning process was started by importing the data via CSV file. We found th
 
 Once the CSV was cleaned up in Excel and re-read into our Jupyter Notebook, we needed to reduce the number of columns while maintaining enough data for each of us to answer our research questions. Out of 55 total columns, we elected to keep the Survey Number (S. No), Game, Platform, Hours (played per week), Earnings, Why Play, Gender, Age, Work (i.e. employment status), Degree (highest level of education received), Residence (by country), Playstyle (alone versus socially), Generalized Anxiety Disorder Score Total (GAD_T), Satisfaction with Life Score Total (SWL_T), and Social Phobia Inventory Score Total (SPIN_T). This resulted in a dataframe that is 13,464 rows by 15 columns, and was much more suited to our needs.
 
-### How do people who play for money compare to people who play for fun?
+### 1. How do people who play for money compare to people who play for fun?
 #### Analysis by Aliyu Muraina
 
 
-### Do professional players have a better Satisfaction with Life (SWL) score than casual players?
+### 2. Do professional players have a better Satisfaction with Life (SWL) score than casual players?
 #### Analysis by Andrew Arjune
 
 
-### Are those who play alone more anxious than those who play socially?
+### 3. Are those who play alone more anxious than those who play socially?
 #### Analysis by Anna Bitzer
 The results of this data found that while all styles of playing video games were associated with similar average GAD scores, the total average GAD score of players who played alone was higher than players that played multiplayer. The mean GAD scores of players that played offline multiplayer, with real life friends (mean GAD = 4.21) and online multiplayer, with real life friends (mean GAD = 4.77) were below the overall population mean (GAD = 5.22), suggesting that less anxious players may be more comfortable playing with people they know in real life. The remaining playstyles multiplayer-online-with online acquaintances or teammates, multiplayer-online-with strangers and single player had mean GAD scores above the population mean, of 5.47, 5.57 and 5.80 respectively.
 
@@ -42,13 +42,15 @@ There were some limitations to this dataset. The majority of respondents to this
 Sources used: https://stackoverflow.com/questions/26700598/matplotlib-showing-x-tick-labels-overlapping Bootcampspot: Xpert Learning Assistant (used for outlier section, and for help formatting boxplot)
 
 
-### US Residents vs European Residents: who spends more time gaming, and how does it compare to their Satisfaction with Life (SWL) score?
+### 4. US Residents vs European Residents: who spends more time gaming, and how does it compare to their Satisfaction with Life (SWL) score?
 #### Analysis by Amy Dohlin
 The total of USA and European players makes up the vast majority of the population of the dataset. This number was found by pulling the country names, and manually filtering out non-USA and non-European countries/regions. If time permitted, it would be more efficient, accurate, and beneficial to pull the region data from Geoapify API and compare data from all continents.
 
 The original hypothesis was that US residents would spend more time gaming and have a lower SWL score than their European counterparts. The data suggests that on average, gamers in the USA spend fewer hours playing video games per week, and have a slightly better satisfaction with life score than European gamers. These results may also be skewed due to more European players taking the survey than US players.
 
 Histograms were created to show the frequencies of SWL scores (USA versus Europe) and hours played per week. Overall, these charts show that European players reported SWL scores that were spiking in the 15 to 25 range (out of a possible score of 42, with 0 being unsatisfied with life and 42 being most satisfied with life), whereas US players have a more even distribution of scores in the same range. Both regions reported identical average hours played per week (22.31 hours for Europe, 20.45 hours for US), but Europe had a maximum of 140 hours per week and the US had a maximum of 105 hours per week.
+
+A t-test was performed on the SWL scores from the US and Europe, and garnered results of t-statistic=4.498068691660252, pvalue=6.93805963055848e-06. The large t-statistic and low p-value indicate a significant difference in the SWL scores between the US and Europe. If the numbers of players distributed between the US and Europe were more even, the result might be less significant. It would be interesting to see what the result would be with all countries in the study represented, it would likely have an even larger difference due to the small population sizes from other countries.
 
 This question could be further analyzed with other factors taken into account, such as employment status, earnings, age, gender, play style, etc. Other limitations to this dataset could be that the total number of participants who took this survey represent only a fraction of gamers worldwide, and could be even more limited depending on where gamers found the survey and how long it was available.
 
@@ -59,7 +61,7 @@ This question could be further analyzed with other factors taken into account, s
 ------------
 
 ## Summary
-
+Based on the data retrieved, video games do have a significant impact on our mental health. Question 3 shows that when gamers play with friends in person (offline) they're less likely to be anxious than if they were playing alone, and could be construed that more social interaction between gamers could make gaming more enjoyable and relaxing. The data in question 4 comparing the USA and Europe shows a correlation between more hours spent playing and a lower SWL score, suggesting that more balance between video games and off-screen activities (perhaps with friends) could elevate a gamer's general life experience.
 
 
 -----------
