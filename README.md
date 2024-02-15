@@ -23,10 +23,13 @@ Once the CSV was cleaned up in Excel and re-read into our Jupyter Notebook, we n
 
 ### 1. How do people who play for money compare to people who play for fun?
 #### Analysis by Aliyu Muraina
+The deduction from this part of the analysis is that there are more people playing video games for fun than for competition: 5289 versus 2091. People who play primarily for fun may have lower anxiety levels on average compared to those playing professionally for money. Playing as a hobby rather than for income may be less stressful.
+There are 2734 people with employment that play just for fun, compared to the 1390 people that are unemployed. The analysis also showed that people play to spend time with friends and family.
 
 
 ### 2. Do professional players have a better Satisfaction with Life (SWL) score than casual players?
 #### Analysis by Andrew Arjune
+In this section, it was found that the percentage of players who game solely for fun was 92%, i.e. those not playing to make a living generally have a higher SWL score than competitive or professional gamers, averaging 1.5 points higher. This was in line with what our team hypothesized, especially given how skewed the dataset seemed to be. Of the players asked, 84% were playing League of Legends, an exclusively online game with little to no single player options. This presents a fairly substantial sample of bias, as casual players are more likely to decompress while gaming, while professional players are more likely to be focused on gaming performance, mechanics, and other aspects, making them less likely to just sit back and enjoy their gaming experience.
 
 
 ### 3. Are those who play alone more anxious than those who play socially?
@@ -61,7 +64,7 @@ This question could be further analyzed with other factors taken into account, s
 ------------
 
 ## Summary
-Based on the data retrieved, video games do have a significant impact on our mental health. Question 3 shows that when gamers play with friends in person (offline) they're less likely to be anxious than if they were playing alone, and could be construed that more social interaction between gamers could make gaming more enjoyable and relaxing. The data in question 4 comparing the USA and Europe shows a correlation between more hours spent playing and a lower SWL score, suggesting that more balance between video games and off-screen activities (perhaps with friends) could elevate a gamer's general life experience.
+Based on the data retrieved, video games do have a significant impact on our mental health. Question 1 reveals that more gamers play for fun than to make a living, and may be less anxious because of this. Along this same vein, question 2 correlates a higher SWL score for casual gamers, and a lower SWL score for professionals. Question 3 shows that when gamers play with friends in person (offline) they're less likely to be anxious than if they were playing alone, and could be construed that more personal social interaction between gamers could make gaming more enjoyable and relaxing. The data in question 4 comparing the USA and Europe shows a correlation between more hours spent playing and a lower SWL score, suggesting that more balance between video games and off-screen activities (perhaps with friends) could elevate a gamer's general life experience. Overall, we can conclude that playing video games casually and for relaxation will cause less mental distress than playing video games for a living.
 
 
 -----------
@@ -69,3 +72,4 @@ Based on the data retrieved, video games do have a significant impact on our men
 ## Sources
 Dataset: https://www.kaggle.com/datasets/divyansh22/online-gaming-anxiety-data?select=GamingStudy_data.csv
 Original Survey: https://osf.io/vyhttpsr5f
+Xpert Learning Assistant via Boot Camp Spot
